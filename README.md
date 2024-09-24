@@ -24,9 +24,9 @@ None
 
 ## Credits
 
-Faizan Khan
-Lav Patel
-Het Shah
+Faizan Khan,
+Lav Patel,
+Het Shah,
 Wimarsha Heshan Jayasinghe
 
 ## License
