@@ -22,6 +22,12 @@ Open the index.html in the browser of yor choosing
 
 None
 
+## Languages
+
+HTML
+CSS
+Javascript
+
 ## Credits
 
 Faizan Khan,
