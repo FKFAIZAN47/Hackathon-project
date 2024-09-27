@@ -1,6 +1,25 @@
-const menuIcon = document.getElementById('menu-icon');
-        const mobileMenu = document.getElementById('mobile-menu');
+// Variables
+const player = new Plyr("video");
+const navLinks = document.querySelectorAll("nav a");
 
-        menuIcon.addEventListener('click', () => {
-          mobileMenu.querySelector('ul').classList.toggle('show');
-        });
+// Functions
+function smoothScroll(e) {
+  e.preventDefault();
+
+  const sectionID = this.getAttribute("href").substring(1);
+  const targetSection = document.getElementById(sectionID);
+
+  // Smooth scroll to the target section
+  targetSection.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
+
+// Event Listeners
+
+document.addEventListener("DOMContentLoaded", () => {
+  navLinks.forEach((link) => {
+    link.addEventListener("click", smoothScroll);
+  });
+});
