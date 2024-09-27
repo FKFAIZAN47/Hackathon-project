@@ -4,100 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrolling Website with Video Player</title>
-    <link rel="stylesheet" href="style.css">
+    <link  rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid.css">
     <script defer src="script.js"></script>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-      }
-
-      .container {
-        width: 90%;
-        margin: 0 auto;
-      }
-
-      header, section, footer {
-        padding: 20px 0;
-      }
-
-      header .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      nav ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        gap: 20px;
-      }
-
-      nav ul li {
-        display: inline;
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        color: #333;
-      }
-
-      .section {
-        padding: 40px 0;
-      }
-
-      #player-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 0;
-      }
-
-      .player {
-        width: 100%;
-        max-width: 600px;
-      }
-
-      footer .container {
-        text-align: center;
-      }
-
-      @media (min-width: 768px) {
-        .container {
-          display: grid;
-          grid-template-columns: repeat(12, 1fr);
-          gap: 20px;
-        }
-
-        header .container {
-          grid-column: span 12;
-        }
-
-        #home, #about, #player-container, #contact {
-          grid-column: span 12;
-        }
-
-        footer .container {
-          grid-column: span 12;
-        }
-      }
-    </style>
 
 </head>
 <body>
+  
 <header>
   <div class="container"></div>
     <div class="logo">Hackathon</div>
     <div class="mobile-menu" id="mobile-menu">
       <nav> 
         <ul>
-          <li><a href="#home">Events</a></li>
-          <li><a href="#about">Project</a></li>
-          <li><a href="#video">Portfolio</a></li>
+          <li><a href="#home" class="nav-link">Events</a></li>
+          <li><a href="#about" class="nav-link">Project</a></li>
+          <li><a href="#player-container" class="nav-link">Portfolio</a></li>
         </ul>
-      </nav>  
+      </nav>
+
+      <style>
+        nav ul {
+          list-style: none;
+          display: flex;
+          justify-content: flex-end;
+          margin: 0;
+          padding: 0;
+        }
+
+        nav {
+          background-color: #333;
+          padding: 1em;
+        }
+
+        nav ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          margin: 0;
+          padding: 0;
+        }
+
+        nav ul li {
+          margin: 0 1em;
+        }
+
+        nav ul li a.nav-link {
+          color: #fff;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s ease, background-color 0.3s ease;
+          padding: 0.5em 1em;
+          border-radius: 5px;
+        }
+
+        nav ul li a.nav-link:hover {
+          color: #333;
+          background-color: #fff;
+        }
+      </style>
     </div>
+
 </header>
 <section id="home" class="section">
   <div class="container">
