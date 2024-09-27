@@ -6,62 +6,139 @@
     <title>Scrolling Website with Video Player</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      header, section, footer {
+        padding: 20px 0;
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li {
+        display: inline;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .section {
+        padding: 40px 0;
+      }
+
+      #player-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+      }
+
+      .player {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      footer .container {
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          gap: 20px;
+        }
+
+        header .container {
+          grid-column: span 12;
+        }
+
+        #home, #about, #player-container, #contact {
+          grid-column: span 12;
+        }
+
+        footer .container {
+          grid-column: span 12;
+        }
+      }
+    </style>
+
 </head>
 <body>
+<header>
+  <div class="container"></div>
+    <div class="logo">Hackathon</div>
+    <div class="mobile-menu" id="mobile-menu">
+      <nav> 
+        <ul>
+          <li><a href="#home">Events</a></li>
+          <li><a href="#about">Project</a></li>
+          <li><a href="#video">Portfolio</a></li>
+        </ul>
+      </nav>  
+    </div>
+</header>
+<section id="home" class="section">
+  <div class="container">
+    <h1>Welcome to Industry Night</h1>
+    <p>Interactive media design</p>
+  </div>
+</section>
 
-    <header>
-        <div class="container">
-            <div class="logo">Hackathon</div>
-            <div class="mobile-menu" id="mobile-menu">
-            <nav> 
-              <ul>
-                <li><a href="#home">Events</a></li>
-                <li><a href="#about">Project</a></li>
-                <li><a href="#video">Portfolio</a></li>
-              </ul>
-            </nav>  
-            </div>
-        </div>
-    </header>
-    <section id="home" class="section">
-        <div class="container">
-            <h1>Welcome to Industry Night</h1>
-            <p>Interactive media design</p>
-        </div>
-    </section>
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>Here is a little about what we do. Learn more about our services.</p>
+  </div>
+</section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Here is a little about what we do. Learn more about our services.</p>
-        </div>
-    </section>
+<section id="player-container" class="col-span-full">
+  <video
+    class="player"
+    controls
+    preload="metadata"
+  >
+    <source src="video/video.mp4" type="video/mp4" />
+    <p>
+      Ooops, something went wrong. You may be using an outdated browser or
+      have javascript disabled.
+    </p>
+  </video>
+</section>
 
-    <section id="player-container" class="col-span-full">
-      <video
-        class="player"
-        controls
-        preload="metadata"
-      >
-        <source src="video/video.mp4" type="video/mp4" />        <p>
-          Ooops, something went wrong. You may be using an oudated browser or
-          have javascript disabled.
-        </p>
-      </video>
-    </section>
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out with any questions or comments.</p>
+  </div>
+</section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Feel free to reach out with any questions or comments.</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2024 FanshaweCollege.</p>
-        </div>
-    </footer>
+<footer>
+  <div class="container">
+    <p>© 2024 FanshaweCollege.</p>
+  </div>
+</footer>
   <script src="js/main.js"></script>
 </body>
 </html>
