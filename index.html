@@ -4,64 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrolling Website with Video Player</title>
-    <link rel="stylesheet" href="style.css">
+    <link  rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid.css">
     <script defer src="script.js"></script>
+
 </head>
 <body>
-
-    <header>
-        <div class="container">
-            <div class="logo">Hackathon</div>
-            <div class="mobile-menu" id="mobile-menu">
-            <nav> 
-              <ul>
-                <li><a href="#home">Events</a></li>
-                <li><a href="#about">Project</a></li>
-                <li><a href="#video">Portfolio</a></li>
-              </ul>
-            </nav>  
-            </div>
+  
+<header>
+  
+      <nav>
+        <div class="logo">Hackathon Logo</div>
+        <div class="mobile-menu" id="mobile-menu">
+          <i class="fas fa-bars" id="menu-icon"></i>
+          <ul>
+            <li><a href="#home" class="nav-link">Events</a></li>
+            <li><a href="#about" class="nav-link">Project</a></li>
+            <li><a href="#player-container" class="nav-link">Portfolio</a></li>
+          </ul>
         </div>
-    </header>
-    <section id="home" class="section">
-        <div class="container">
-            <h1>Welcome to Industry Night</h1>
-            <p>Interactive media design</p>
-        </div>
-    </section>
+      </nav>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Here is a little about what we do. Learn more about our services.</p>
-        </div>
-    </section>
+      <style>
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem;
+          background-color: #333;
+          color: #fff;
+        }
 
-    <section id="player-container" class="col-span-full">
-      <video
-        class="player"
-        controls
-        preload="metadata"
-      >
-        <source src="video/video.mp4" type="video/mp4" />        <p>
-          Ooops, something went wrong. You may be using an oudated browser or
-          have javascript disabled.
-        </p>
-      </video>
-    </section>
+        .logo {
+          font-size: 1.5rem;
+        }
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Feel free to reach out with any questions or comments.</p>
-        </div>
-    </section>
+        .mobile-menu {
+          position: relative;
+        }
 
-    <footer>
-        <div class="container">
-            <p>© 2024 FanshaweCollege.</p>
-        </div>
-    </footer>
+        .mobile-menu ul {
+          list-style: none;
+          display: flex;
+          gap: 1rem;
+        }
+
+        .mobile-menu ul li {
+          display: inline;
+        }
+
+        .mobile-menu ul li a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        #menu-icon {
+          display: none;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+          .mobile-menu ul {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #333;
+            width: 100%;
+          }
+
+          .mobile-menu ul.show {
+            display: flex;
+          }
+
+          #menu-icon {
+            display: block;
+          }
+        }
+      </style>
+
+        
+      <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuIcon.addEventListener('click', () => {
+          mobileMenu.querySelector('ul').classList.toggle('show');
+        });
+        </script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</header>
+
+<section id="home" class="home-col">
+  <div class="container">
+    <h1>Welcome to Industry Night</h1>
+    <p>Interactive media design</p>
+  </div>
+</section>
+
+<section id="about" class="about-col">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>Here is a little about what we do. Learn more about our services.</p>
+  </div>
+</section>
+
+
+
+<section id="player-container" class="col-span-full">
+  <video
+    class="player"
+    controls
+    preload="metadata"
+  >
+    <source src="video/video.mp4" type="video/mp4" />
+    <p>
+      Ooops, something went wrong. You may be using an outdated browser or
+      have javascript disabled.
+    </p>
+  </video>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out with any questions or comments.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2024 FanshaweCollege.</p>
+  </div>
+</footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
