@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Scrolling Website with Video Player</title>
+    <link  rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <script defer src="script.js"></script>
+
 </head>
 <body>
-    
+  
+<header>
+
+  <div class="container">
+    <h2>About Us</h2>
+    <p>Here is a little about what we do. Learn more about our services.</p>
+  </div>
+</section>
+
+
+<section id="player-container" class="col-span-full">
+  <video
+    class="player"
+    controls
+    preload="metadata"
+  >
+    <source src="video/video.mp4" type="video/mp4" />
+    <p>
+      Ooops, something went wrong. You may be using an outdated browser or
+      have javascript disabled.
+    </p>
+  </video>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out with any questions or comments.</p>
+  </div>
+</section>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
