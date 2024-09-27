@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrolling Website with Video Player</title>
-    <link  rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/grid.css">
-    <script defer src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon Home Page</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link href="css/grid.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="grid-con">
+      <section id="player-container" class="col-span-full">
+        <video
+          class="player"
+          controls
+          preload="metadata"
+          poster="images/placeholder.png"
+        >
+          <source src="video/night.mp4" type="video/mp4" />
+          <p>
+            Ooops, something went wrong. You may be using an oudated browser or
+            have javascript disabled.
+          </p>
+        </video>
+      </section>
+    </div>
+    <header>
+      <nav>
+        <a href="#event" class="active">Event</a>
+        <a href="#projects">Projects</a>
+        <a href="#portfolios">Portfolios</a>
+      </nav>
+    </header>
 
-</head>
-<body>
-  
-<header>
+    <section id="event">Event</section>
+    <section id="projects">Projects</section>
+    <section id="portfolios">Portfolios</section>
 
-  <div class="container">
-    <h2>About Us</h2>
-    <p>Here is a little about what we do. Learn more about our services.</p>
-  </div>
-</section>
-
-
-<section id="player-container" class="col-span-full">
-  <video
-    class="player"
-    controls
-    preload="metadata"
-  >
-    <source src="video/video.mp4" type="video/mp4" />
-    <p>
-      Ooops, something went wrong. You may be using an outdated browser or
-      have javascript disabled.
-    </p>
-  </video>
-</section>
-
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <p>Feel free to reach out with any questions or comments.</p>
-  </div>
-</section>
-
-  <script src="js/main.js"></script>
-</body>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
