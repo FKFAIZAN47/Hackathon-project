@@ -1,43 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hackathon Home Page</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry Night</title>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="grid-con">
-      <section id="player-container" class="col-span-full">
-        <video
-          class="player"
-          controls
-          preload="metadata"
-          poster="images/placeholder.png"
-        >
-          <source src="video/night.mp4" type="video/mp4" />
-          <p>
-            Ooops, something went wrong. You may be using an oudated browser or
-            have javascript disabled.
-          </p>
-        </video>
-      </section>
+</head>
+<body>
+  <header class="header">
+    <div class="col-start-1 col-end-2 m-col-start-1 m-col-end-3 logo">
+        <img src="images/main.png" alt="Logo">
     </div>
-    <header>
-      <nav>
-        <a href="#event" class="active">Event</a>
-        <a href="#projects">Projects</a>
-        <a href="#portfolios">Portfolios</a>
-      </nav>
-    </header>
+    <nav class="nav">
+      <ul>
+        <a href="#">EVENT</a>
+        <a href="#">PROJECTS</a>
+        <a href="#">PORTFOLIOS</a>
+        </ul>
+    </nav>
+</header>
 
-    <section id="event">Event</section>
-    <section id="projects">Projects</section>
-    <section id="portfolios">Portfolios</section>
 
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="js/main.js"></script>
-  </body>
+</body>
 </html>
