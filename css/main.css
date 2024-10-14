@@ -10,8 +10,20 @@ html, body{
   width: 100%;
 }
 
+/* video player  */
+
+:root {
+  --plyr-color-main: rgba(0, 0, 0, 0.5);
+  --plyr-control-icon-size: 15px;
+  --plyr-control-radius: 20px;
+  --plyr-font-family: Helvetica, Arial, sans-serif;
+  --plyr-control-spacing: 15px;
+}
+
+/* video player end */
+
 .header {
-  background-color: #e02726; 
+  background-color: #d32f2f; 
   color: white;
   display: flex;
   justify-content: space-between;
@@ -105,18 +117,97 @@ html, body{
 }
 
 .capstone-title {
-  font-size: 32px; 
-  font-weight: 600; 
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
   margin-bottom: 20px; 
-  color: #000; 
 }
 
-.capstone-desc {
-  font-size: 16px; 
-  font-weight: 300; 
-  line-height: 28px; 
-  color: #333; 
+.capstone-container {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  font-weight: 300;  
   margin-bottom: 15px; 
+}
+
+.event {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.details {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.details h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+}
+.details p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #b71c1c;
+  transform: scale(1.05);
+}
+
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.grid-two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 15px; 
+  border-radius: 30px; 
+  box-shadow: 0 8px 8px rgba(36, 35, 35, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  margin: 10px; 
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #f8f8f8;
+  box-shadow: 0 12px 15px rgba(36, 35, 35, 0.2);
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
 }
 
 @keyframes slideIn {
@@ -179,9 +270,10 @@ html, body{
     font-size: 24px; 
 }
 
-.capstone-desc {
-    font-size: 14px; 
-    line-height: 24px; 
+  .capstone-container {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
 }
 
   .footer {
@@ -203,7 +295,7 @@ html, body{
 }
 
 .footer {
-  background-color: #e02726;
+  background-color: #d32f2f;
   color: white;
   padding: 20px;
   text-align: center;
