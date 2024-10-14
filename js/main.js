@@ -23,3 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", smoothScroll);
   });
 });
+
+// gasap animations
+gsap.from(".hero-heading, .info", { 
+  duration: 5, 
+  opacity: 0, 
+  y: -50, 
+  ease: "power2.out" 
+});
+
+
+gsap.from(".capstone-title, .capstone-desc", { 
+  opacity: 0,
+  duration: 1,
+  delay: 1,
+});
