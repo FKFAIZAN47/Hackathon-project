@@ -210,6 +210,43 @@ html, body{
   margin: 0;
 }
 
+/* students */
+.student-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.student-box {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.student-box:hover {
+  transform: scale(1.05);
+  background-color: #f8f8f8;
+  box-shadow: 0 12px 15px rgba(36, 35, 35, 0.2);
+}
+
+.student-box h3 {
+  font-weight: bold;
+}
+
+.student-box a {
+  color: #626466;
+  text-decoration: none;
+}
+
+.student-box a:hover {
+  color: #d32f2f;
+}
+
 @keyframes slideIn {
   from {
       transform: translateY(20px);
