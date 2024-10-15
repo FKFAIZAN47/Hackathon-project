@@ -1,51 +1,39 @@
 // Variables
-const player = new Plyr("video");
+const player = new Plyr('video');
 const navLinks = document.querySelectorAll("nav a");
 
 // Functions
 function smoothScroll(e) {
-  e.preventDefault();
-
+  e.preventDefault(); 
+  
   const sectionID = this.getAttribute("href").substring(1);
   const targetSection = document.getElementById(sectionID);
-
+  
   // Smooth scroll to the target section
-  targetSection.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
+  if (targetSection) {
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
 }
 
 // Event Listeners
-
 document.addEventListener("DOMContentLoaded", () => {
-  navLinks.forEach((link) => {
+  navLinks.forEach(link => {
     link.addEventListener("click", smoothScroll);
   });
 });
 
-// gasap animations
-gsap.from(".hero-heading, .info", { 
-  duration: 5, 
-  opacity: 0, 
-  y: -50, 
-  ease: "power2.out" 
-});
 
-
-gsap.from(".capstone-title, .capstone-desc", { 
-  opacity: 0,
-  duration: 1,
-  delay: 1,
-});
-
+// Portfolios 
 
 const portfolioCon = document.querySelector("#portfolio-con");
 
 const portfolios = [
-{name: "Abdullh Sultan", pLink: "abdullhsultan.com"},
-{name: "Aiden Wotton", pLink: "aidenwotton.com"},
-{name: "Apple Grace Geaslan", pLink: "applegracegeaslan.com"},
+{name: "Rodriguez-Ram Diego", pLink: "rodriguez-ramdiego.com"},
+{name: "Cooper Kayla", pLink: "cooperkayla.com"},
+{name: "Lozon Ramona", pLink: "lozonramona.com"},
 {name: "Apple Grace Geaslan", pLink: "applegracegeaslan.com"},
 {name: "Apple Grace Geaslan", pLink: "applegracegeaslan.com"},
 {name: "Apple Grace Geaslan", pLink: "applegracegeaslan.com"},
@@ -85,3 +73,31 @@ portfolios.forEach((portfolio) => {
   portfolioDiv.appendChild(portfolioLink);
   portfolioCon.appendChild(portfolioDiv);
 });
+
+
+// Testimonials
+
+
+const testimonials = [
+  { name: "- Aimee Hagerty, co-founder and board member for Foundation Sixty6", testimonial: "These amazing students bring fresh perspectives and innovative ideas to the table. Their dedication to the project is truly inspiring,"}, 
+  { name: "- Bill Hagerty, co-founder and board member for Foundation Sixty6", testimonial: "It's been incredible to work alongside these talented students. Their passion and dedication reaffirm our commitment to supporting youth mental health."},
+  { name: "- Marco De Luca, IDP Program coordinator and professor for Fanshawe", testimonial: "Observing the students collaborating with Foundation Sixty6 has been an inspiring journey. The creativity and skill displayed by the students have been truly outstanding."}
+];
+
+const testimonialCon = document.querySelector("#testimonial-con");   
+
+testimonials.forEach((testimonial) => {
+  const testimonialDiv = document.createElement("div");
+  testimonialDiv.classList.add("testimonial-box");
+
+  const testimonialParagraph = document.createElement("p");
+  const testimonialName = document.createElement("h3");
+
+  testimonialParagraph.textContent = `${testimonial.testimonial}`;
+  testimonialName.textContent = testimonial.name;
+
+  testimonialDiv.appendChild(testimonialParagraph);
+  testimonialDiv.appendChild(testimonialName);
+  testimonialCon.appendChild(testimonialDiv);
+});
+
