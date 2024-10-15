@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
 const portfolioCon = document.querySelector("#portfolio-con");
 
 const portfolios = [
-{name: "Rodriguez-Ram Diego", pLink: "rodriguez-ramdiego.com"},
+{name: "Rodriguez-Ram Diego", pLink: "rodriguezramdiego.com"},
 {name: "Cooper Kayla", pLink: "cooperkayla.com"},
 {name: "Lozon Ramona", pLink: "lozonramona.com"},
-{name: "Apple Grace Geaslan", pLink: "applegracegeaslan.com"},
-{name: "Apple Grace Geaslan", pLink: "applegracegeaslan.com"},
+{name: "Chen Qingdong", pLink: "chenqingdong.com"},
+{name: "Khan Taylor", pLink: "Khan Taylor.com"},
 {name: "Apple Grace Geaslan", pLink: "applegracegeaslan.com"},
 {name: "Apple Grace Geaslan", pLink: "applegracegeaslan.com"},
 {name: "Apple Grace Geaslan", pLink: "applegracegeaslan.com"},
