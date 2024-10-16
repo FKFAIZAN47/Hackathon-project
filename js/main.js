@@ -147,3 +147,111 @@ testimonials.forEach((testimonial) => {
   testimonialCon.appendChild(testimonialDiv);
 });
 
+// gasap animations
+
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".hero-heading, .info", { 
+  duration: 5, 
+  opacity: 0, 
+  y: -50, 
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".hero-heading, .info",
+  }
+});
+
+
+gsap.from(".capstone", { 
+  scrollTrigger: {
+    trigger: ".capstone",
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: true,
+  },
+  opacity: 0,
+  duration: 2,
+});
+
+// gsap.from(".details", { 
+  
+//   opacity: 0,
+//   duration: 1,
+//   delay: 5,
+// });
+
+gsap.from(".details", { 
+  duration: 2, 
+  opacity: 0, 
+  y: -50, 
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".details",
+  }
+});
+
+// card animation
+gsap.from(".grid-two", { 
+  duration: 1.5, 
+  x: -200, 
+  opacity: 0, 
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".grid-two",
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: true,
+  }
+});
+
+gsap.from(".grid-three", { 
+  duration: 1.5, 
+  x: -200, 
+  opacity: 0, 
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".grid-three",
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: true,
+  }
+});
+
+// gsap testimonial animation
+
+gsap.from(".Testimonials", { 
+  duration: 2, 
+  opacity: 0, 
+  y: -50, 
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".Testimonials",
+  }
+});
+
+gsap.from(".testimonial-grid", { 
+  duration: 1.5, 
+  x: -200, 
+  opacity: 0, 
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".testimonial-grid",
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: true,
+  }
+});
+
+// gsap portfolio animation
+
+gsap.from(".port", { 
+  duration: 2, 
+  opacity: 0, 
+  y: -50, 
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".port",
+  }
+});
