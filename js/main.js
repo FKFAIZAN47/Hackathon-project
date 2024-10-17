@@ -31,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
 const portfolioCon = document.querySelector("#portfolio-con");
 
 const portfolios = [
+  {name: "Het Shah", pLink: "hetshah.com"},
+  {name: "Lav Patel", pLink: "lavpatel.com"},
+  {name: "Faizan Khan", pLink: "faizankhan.com"},
+  {name: "Heshan Jayasinghe", pLink: "heshanjayasinghe.com"},
   {name: "Rodriguez-Ram Diego", pLink: "rodriguezramdiego.com"},
   {name: "Cooper Kayla", pLink: "cooperkayla.com"},
   {name: "Lozon Ramona", pLink: "lozonramona.com"},
@@ -86,7 +90,6 @@ const portfolios = [
   {name: "Sham King Yin", pLink: "shamkingyin.com"},
   {name: "Benipal Tapshveer", pLink: "benipaltapshveer.com"},
   {name: "Laput Dixie Marie", pLink: "laputdixiemarie.com"},
-  {name: "Faizan Khan", pLink: "faizankhan.com"},
   {name: "Lie Keith", pLink: "liekeith.com"},
   {name: "Gamborgi Henrique", pLink: "gamborgihenrique.com"},
   {name: "Mahaittidon Natchanon", pLink: "mahaittidonnatchanon.com"},
@@ -95,10 +98,7 @@ const portfolios = [
   {name: "Gohetia Sheldon", pLink: "gohetiasheldon.com"},
   {name: "Gregory Joyal", pLink: "gregoryjoyal.com"},
   {name: "Sidhu Sukhbag", pLink: "sidhusukhbag.com"},
-  {name: "Het Shah", pLink: "hetshah.com"},
-  {name: "Lav Patel", pLink: "lavpatel.com"},
   {name: "Da-Silva Simon", pLink: "dasilvasimon.com"},
-  {name: "Heshan Jayasinghe", pLink: "heshanjayasinghe.com"},
   {name: "Ho Gia Khang", pLink: "hogiakhang.com"},
   {name: "Bendzsel Kristina", pLink: "bendzselkristinacom"}
   ];
